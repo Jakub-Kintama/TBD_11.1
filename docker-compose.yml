@@ -12,6 +12,8 @@ services:
     image: diamol/ch09-lab-prometheus
     ports:
       - "9090:9090"
+    environment:
+      - DOCKER_HOST=${HOST_IP}
     networks:
       - app-net
 
